@@ -1,0 +1,199 @@
+EduTrack/
+│
+├── frontend/
+│   ├── public/
+│   │   ├── favicon.svg
+│   │   └── images/
+│   │
+│   ├── src/
+│   │   ├── assets/
+│   │   │   ├── images/
+│   │   │   ├── icons/
+│   │   │   └── logos/
+│   │   │
+│   │   ├── components/
+│   │   │   ├── common/
+│   │   │   │   ├── Button.jsx
+│   │   │   │   ├── Input.jsx
+│   │   │   │   ├── Select.jsx
+│   │   │   │   ├── Modal.jsx
+│   │   │   │   ├── ConfirmDialog.jsx
+│   │   │   │   ├── Card.jsx
+│   │   │   │   ├── Loader.jsx
+│   │   │   │   ├── ErrorMessage.jsx
+│   │   │   │   ├── EmptyState.jsx
+│   │   │   │   ├── Toast.jsx
+│   │   │   │   └── SearchInput.jsx
+│   │   │   │
+│   │   │   ├── auth/
+│   │   │   │   ├── LoginForm.jsx
+│   │   │   │   ├── SignupForm.jsx
+│   │   │   │   ├── PasswordInput.jsx
+│   │   │   │   └── RoleSelector.jsx
+│   │   │   │
+│   │   │   ├── layout/
+│   │   │   │   ├── Navbar.jsx
+│   │   │   │   ├── Sidebar.jsx
+│   │   │   │   ├── MainLayout.jsx
+│   │   │   │   ├── PageHeader.jsx
+│   │   │   │   └── ProtectedRoute.jsx
+│   │   │   │
+│   │   │   ├── dashboard/
+│   │   │   │   ├── StatCard.jsx
+│   │   │   │   ├── AttendanceChart.jsx
+│   │   │   │   ├── GradeChart.jsx
+│   │   │   │   ├── RecentStudents.jsx
+│   │   │   │   ├── RecentActivity.jsx
+│   │   │   │   ├── MyCourses.jsx
+│   │   │   │   └── DashboardOverview.jsx
+│   │   │   │
+│   │   │   ├── students/
+│   │   │   │   ├── StudentTable.jsx
+│   │   │   │   ├── StudentForm.jsx
+│   │   │   │   ├── StudentCard.jsx
+│   │   │   │   ├── StudentFilters.jsx
+│   │   │   │   └── StudentDetails.jsx
+│   │   │   │
+│   │   │   ├── teachers/
+│   │   │   │   ├── TeacherTable.jsx
+│   │   │   │   ├── TeacherForm.jsx
+│   │   │   │   └── TeacherCard.jsx
+│   │   │   │
+│   │   │   ├── courses/
+│   │   │   │   ├── CourseCard.jsx
+│   │   │   │   ├── CourseForm.jsx
+│   │   │   │   ├── CourseList.jsx
+│   │   │   │   └── EnrollPanel.jsx
+│   │   │   │
+│   │   │   ├── attendance/
+│   │   │   │   └── AttendanceSheet.jsx
+│   │   │   │
+│   │   │   ├── grades/
+│   │   │   │   ├── GradeTable.jsx
+│   │   │   │   └── GradeForm.jsx
+│   │   │   │
+│   │   │   └── reports/
+│   │   │       ├── StudentReport.jsx
+│   │   │       ├── AttendanceReport.jsx
+│   │   │       └── AcademicReport.jsx
+│   │   │
+│   │   ├── pages/
+│   │   │   ├── Login.jsx
+│   │   │   ├── Dashboard.jsx
+│   │   │   ├── Users.jsx
+│   │   │   ├── Students.jsx
+│   │   │   ├── StudentDetails.jsx
+│   │   │   ├── Teachers.jsx
+│   │   │   ├── Courses.jsx
+│   │   │   ├── Attendance.jsx
+│   │   │   ├── Grades.jsx
+│   │   │   ├── Reports.jsx
+│   │   │   └── NotFound.jsx
+│   │   │
+│   │   ├── context/
+│   │   │   ├── AuthContext.jsx
+│   │   │   └── SchoolContext.jsx
+│   │   │
+│   │   ├── reducers/
+│   │   │   └── schoolReducer.js
+│   │   │
+│   │   ├── hooks/
+│   │   │   ├── useForm.js
+│   │   │   ├── useDebounce.js
+│   │   │   ├── useLocalStorage.js
+│   │   │   └── useFetch.js
+│   │   │
+│   │   ├── services/
+│   │   │   ├── authService.js
+│   │   │   ├── dashboardService.js
+│   │   │   ├── studentService.js
+│   │   │   ├── teacherService.js
+│   │   │   ├── courseService.js
+│   │   │   ├── enrollmentService.js
+│   │   │   ├── attendanceService.js
+│   │   │   ├── gradeService.js
+│   │   │   └── apiClient.js
+│   │   │
+│   │   ├── data/
+│   │   │   └── mockData.js
+│   │   │
+│   │   ├── utils/
+│   │   │   ├── validators.js
+│   │   │   ├── formatters.js
+│   │   │   ├── constants.js
+│   │   │   └── calculations.js
+│   │   │
+│   │   ├── styles/
+│   │   │   ├── variables.css
+│   │   │   ├── global.css
+│   │   │   ├── layout.css
+│   │   │   ├── auth.css
+│   │   │   ├── dashboard.css
+│   │   │   └── responsive.css
+│   │   │
+│   │   ├── App.jsx
+│   │   └── main.jsx
+│   │
+│   ├── .env.example
+│   ├── .gitignore
+│   ├── index.html
+│   ├── package.json
+│   └── vite.config.js
+│
+├── backend/
+│   ├── src/
+│   │   ├── config/
+│   │   │   └── database.js
+│   │   │
+│   │   ├── models/
+│   │   │   ├── User.js
+│   │   │   ├── Student.js
+│   │   │   ├── Teacher.js
+│   │   │   ├── Course.js
+│   │   │   ├── Enrollment.js
+│   │   │   ├── Attendance.js
+│   │   │   └── Grade.js
+│   │   │
+│   │   ├── controllers/
+│   │   │   ├── authController.js
+│   │   │   ├── studentController.js
+│   │   │   ├── teacherController.js
+│   │   │   ├── courseController.js
+│   │   │   ├── enrollmentController.js
+│   │   │   ├── attendanceController.js
+│   │   │   ├── gradeController.js
+│   │   │   └── dashboardController.js
+│   │   │
+│   │   ├── routes/
+│   │   │   ├── authRoutes.js
+│   │   │   ├── studentRoutes.js
+│   │   │   ├── teacherRoutes.js
+│   │   │   ├── courseRoutes.js
+│   │   │   ├── enrollmentRoutes.js
+│   │   │   ├── attendanceRoutes.js
+│   │   │   ├── gradeRoutes.js
+│   │   │   └── dashboardRoutes.js
+│   │   │
+│   │   ├── middleware/
+│   │   │   ├── authMiddleware.js
+│   │   │   ├── roleMiddleware.js
+│   │   │   └── errorMiddleware.js
+│   │   │
+│   │   ├── services/
+│   │   ├── validators/
+│   │   ├── utils/
+│   │   └── app.js
+│   │
+│   ├── server.js
+│   ├── .env.example
+│   ├── .gitignore
+│   └── package.json
+│
+├── docs/
+│   ├── requirements.md
+│   ├── features.md
+│   ├── database-design.md
+│   └── api-documentation.md
+│
+├── .gitignore
+└── README.md
