@@ -1,0 +1,322 @@
+/* =========================================
+   PROFILE PAGE
+========================================= */
+
+.profilePage {
+    width: 100%;
+    min-width: 0;
+}
+
+/* =========================================
+   PAGE HEADER
+========================================= */
+
+.profilePageHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 25px;
+}
+
+.profilePageHeader h2 {
+    margin: 0 0 7px;
+    color: var(--heading-color, #172b4d);
+    font-size: 23px;
+    font-weight: 700;
+}
+
+.profilePageHeader p {
+    margin: 0;
+    color: var(--muted-color, #718096);
+    font-size: 13px;
+}
+
+/* =========================================
+   BACK TO DASHBOARD BUTTON
+========================================= */
+
+.profileBackButton {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    min-height: 42px;
+    padding: 0 17px;
+    background: #ffffff;
+    color: #1769f5;
+    border: 1px solid #dce6f5;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: 600;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.profileBackButton:hover {
+    background: #1769f5;
+    color: #ffffff;
+    border-color: #1769f5;
+    box-shadow: 0 4px 12px rgba(23, 105, 245, 0.16);
+    transform: translateY(-1px);
+}
+
+.profileBackButton:active {
+    transform: translateY(0);
+}
+
+/* =========================================
+   PROFILE CONTENT
+========================================= */
+
+.profileContent {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+/* =========================================
+   PROFILE OVERVIEW
+========================================= */
+
+.profileOverview {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    padding: 28px;
+    background: #ffffff;
+    border: 1px solid var(--border-color, #e3eaf5);
+    border-radius: 14px;
+    box-shadow: var(--shadow-sm, 0 3px 12px rgba(25, 45, 75, 0.04));
+}
+
+.profileAvatar {
+    width: 90px;
+    height: 90px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #1769f5, #4388ff);
+    color: #ffffff;
+    border-radius: 50%;
+    font-size: 29px;
+    font-weight: 700;
+    box-shadow: 0 5px 15px rgba(23, 105, 245, 0.2);
+}
+
+.profileOverviewInfo {
+    min-width: 0;
+}
+
+.profileOverviewInfo h2 {
+    margin: 0 0 7px;
+    color: #172b4d;
+    font-size: 21px;
+    font-weight: 700;
+}
+
+.profileOverviewInfo p {
+    margin: 0 0 12px;
+    color: #718096;
+    font-size: 13px;
+    overflow-wrap: anywhere;
+}
+
+.profileRoleBadge {
+    display: inline-flex;
+    align-items: center;
+    padding: 6px 12px;
+    background: #eaf2ff;
+    color: #1769f5;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+/* =========================================
+   INFORMATION CARDS
+========================================= */
+
+.profileInformationCard {
+    padding: 25px;
+    background: #ffffff;
+    border: 1px solid var(--border-color, #e3eaf5);
+    border-radius: 14px;
+    box-shadow: var(--shadow-sm, 0 3px 12px rgba(25, 45, 75, 0.04));
+}
+
+.profileCardHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 19px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #edf0f5;
+}
+
+.profileCardHeader h3 {
+    margin: 0 0 6px;
+    color: #172b4d;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.profileCardHeader p {
+    margin: 0;
+    color: #8793a5;
+    font-size: 12px;
+}
+
+/* =========================================
+   PERSONAL INFORMATION GRID
+========================================= */
+
+.profileInformationGrid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 25px 35px;
+}
+
+.profileInformationItem {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+    min-width: 0;
+}
+
+.profileInformationLabel {
+    color: #8793a5;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.profileInformationItem h4 {
+    margin: 0;
+    color: #253858;
+    font-size: 14px;
+    font-weight: 600;
+    overflow-wrap: anywhere;
+}
+
+/* =========================================
+   ACCOUNT STATUS
+========================================= */
+
+.profileActiveStatus {
+    width: fit-content;
+    padding: 5px 11px;
+    background: #e7f8ef;
+    color: #16834a;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+/* =========================================
+   ACCOUNT INFORMATION
+========================================= */
+
+.profileAccountInfo {
+    display: flex;
+    flex-direction: column;
+}
+
+.profileAccountRow {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    padding: 15px 3px;
+    border-bottom: 1px solid #edf0f5;
+}
+
+.profileAccountRow:last-child {
+    border-bottom: none;
+}
+
+.profileAccountRow span {
+    color: #718096;
+    font-size: 13px;
+}
+
+.profileAccountRow strong {
+    color: #253858;
+    font-size: 13px;
+    font-weight: 600;
+    text-align: right;
+}
+
+/* =========================================
+   RESPONSIVE DESIGN
+========================================= */
+
+@media (max-width: 768px) {
+    .profileOverview {
+        padding: 22px;
+    }
+
+    .profileAvatar {
+        width: 75px;
+        height: 75px;
+        font-size: 25px;
+    }
+
+    .profileInformationCard {
+        padding: 20px;
+    }
+
+    .profileInformationGrid {
+        gap: 22px;
+    }
+}
+
+@media (max-width: 520px) {
+    .profilePageHeader {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .profilePageHeader h2 {
+        font-size: 20px;
+    }
+
+    .profileBackButton {
+        width: 100%;
+    }
+
+    .profileOverview {
+        align-items: flex-start;
+        gap: 15px;
+        padding: 18px;
+    }
+
+    .profileAvatar {
+        width: 58px;
+        height: 58px;
+        font-size: 21px;
+    }
+
+    .profileOverviewInfo h2 {
+        font-size: 16px;
+    }
+
+    .profileOverviewInfo p {
+        font-size: 11px;
+    }
+
+    .profileInformationGrid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .profileInformationCard {
+        padding: 17px;
+    }
+
+    .profileAccountRow {
+        align-items: flex-start;
+    }
+}

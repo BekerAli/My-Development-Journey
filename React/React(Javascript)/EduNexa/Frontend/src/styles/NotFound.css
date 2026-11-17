@@ -1,0 +1,98 @@
+.notFoundPage {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 20px;
+    background: var(--background-color, #f3f6fc);
+}
+
+.notFoundContent {
+    width: 100%;
+    max-width: 520px;
+    padding: 55px 40px;
+    text-align: center;
+    background: var(--white-color, #ffffff);
+    border: 1px solid var(--border-color, #e3eaf5);
+    border-radius: 18px;
+    box-shadow: var(--shadow-md, 0 10px 30px rgba(16, 35, 68, 0.08));
+}
+
+.notFoundIcon {
+    margin-bottom: 20px;
+    color: var(--primary-color, #1769f5);
+    font-size: 96px;
+    font-weight: 800;
+    line-height: 1;
+    letter-spacing: -5px;
+}
+
+.notFoundLabel {
+    margin-bottom: 12px;
+    color: var(--primary-color, #1769f5);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.notFoundContent h1 {
+    margin-bottom: 14px;
+    color: var(--text-color, #172b4d);
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.notFoundDescription {
+    max-width: 390px;
+    margin: 0 auto 28px;
+    color: var(--text-muted, #718096);
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+.notFoundHomeButton {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 46px;
+    padding: 0 24px;
+    border-radius: 9px;
+    background: var(--primary-color, #1769f5);
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.notFoundHomeButton:hover {
+    background: var(--primary-dark, #0d55d9);
+    transform: translateY(-2px);
+}
+
+.notFoundFooter {
+    margin-top: 38px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border-color, #e3eaf5);
+    color: var(--text-muted, #718096);
+    font-size: 12px;
+}
+
+@media (max-width: 480px) {
+    .notFoundContent {
+        padding: 40px 22px;
+    }
+
+    .notFoundIcon {
+        font-size: 76px;
+    }
+
+    .notFoundContent h1 {
+        font-size: 23px;
+    }
+
+    .notFoundDescription {
+        font-size: 14px;
+    }
+}

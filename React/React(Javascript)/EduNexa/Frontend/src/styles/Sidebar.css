@@ -1,0 +1,352 @@
+/* ==========================================
+   SIDEBAR - MAIN CONTAINER
+========================================== */
+
+.app-sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100vh;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(180deg, #102344 0%, #0b1b35 100%);
+    color: #ffffff;
+    padding: 25px 15px 18px;
+    z-index: 1000;
+    overflow-y: auto;
+    overflow-x: hidden;
+    box-shadow: 4px 0 20px rgba(10, 28, 55, 0.08);
+}
+
+/* ==========================================
+   BRAND
+========================================== */
+
+.sidebar-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 0 8px 32px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.09);
+}
+
+.sidebar-brand-icon {
+    width: 48px;
+    height: 48px;
+    min-width: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(23, 105, 245, 0.18);
+    border-radius: 13px;
+    font-size: 27px;
+}
+
+.sidebar-brand-text h2 {
+    color: #ffffff;
+    font-size: 21px;
+    font-weight: 750;
+    letter-spacing: 0.3px;
+}
+
+.sidebar-brand-text p {
+    color: #a9bad2;
+    font-size: 11px;
+    margin-top: 3px;
+}
+
+/* ==========================================
+   NAVIGATION
+========================================== */
+
+.sidebar-navigation {
+    flex: 1;
+    padding-top: 30px;
+}
+
+.sidebar-section-title {
+    color: #8195b2;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.4px;
+    padding: 0 13px;
+    margin-bottom: 15px;
+}
+
+.sidebar-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.sidebar-link {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    min-height: 48px;
+    padding: 0 14px;
+    border-radius: 10px;
+    color: #c3d0e2;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.22s ease;
+}
+
+.sidebar-link:hover {
+    color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.08);
+    transform: translateX(3px);
+}
+
+.sidebar-link-icon {
+    width: 25px;
+    min-width: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 23px;
+    color: #a9bdd8;
+}
+
+.sidebar-link-name {
+    flex: 1;
+}
+
+/* Active Navigation */
+
+.sidebar-link.active {
+    color: #ffffff;
+    background: linear-gradient(100deg, #1769f5, #0754d8);
+    font-weight: 650;
+    box-shadow: 0 5px 14px rgba(23, 105, 245, 0.25);
+}
+
+.sidebar-link.active .sidebar-link-icon {
+    color: #ffffff;
+}
+
+.sidebar-link.active:hover {
+    transform: translateX(0);
+    background: linear-gradient(100deg, #2879ff, #1260e9);
+}
+
+.sidebar-active-indicator {
+    display: none;
+}
+
+/* ==========================================
+   SIDEBAR BOTTOM
+========================================== */
+
+.sidebar-bottom {
+    margin-top: auto;
+}
+
+/* Promotional Panel */
+
+.sidebar-promo {
+    position: relative;
+    overflow: hidden;
+    margin: 20px 2px;
+    padding: 20px 13px;
+    text-align: center;
+    background: linear-gradient(145deg, #193d70, #12305c);
+    border: 1px solid rgba(76, 145, 255, 0.35);
+    border-radius: 13px;
+}
+
+.sidebar-promo::after {
+    content: "";
+    position: absolute;
+    width: 160px;
+    height: 100px;
+    right: -55px;
+    bottom: -65px;
+    border-radius: 50%;
+    background: rgba(23, 105, 245, 0.22);
+}
+
+.sidebar-promo-icon {
+    font-size: 38px;
+    margin-bottom: 10px;
+}
+
+.sidebar-promo h3 {
+    color: #ffffff;
+    font-size: 15px;
+    line-height: 1.5;
+    font-weight: 650;
+    margin-bottom: 7px;
+}
+
+.sidebar-promo p {
+    color: #b8cbe5;
+    font-size: 11px;
+    line-height: 1.5;
+}
+
+/* ==========================================
+   USER PROFILE
+========================================== */
+
+.sidebar-user {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 15px 5px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.10);
+}
+
+.sidebar-user-avatar {
+    width: 38px;
+    height: 38px;
+    min-width: 38px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: #dceaff;
+    color: #1556bd;
+    font-size: 13px;
+    font-weight: 750;
+}
+
+.sidebar-user-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.sidebar-user-info h4 {
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: 650;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.sidebar-user-info p {
+    color: #a9bad2;
+    font-size: 11px;
+    margin-top: 3px;
+}
+
+.sidebar-logout-btn {
+    width: 34px;
+    height: 34px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.07);
+    color: #c6d4e7;
+    font-size: 21px;
+}
+
+.sidebar-logout-btn:hover {
+    background-color: rgba(229, 72, 77, 0.2);
+    color: #ff777b;
+}
+
+/* ==========================================
+   SCROLLBAR
+========================================== */
+
+.app-sidebar::-webkit-scrollbar {
+    width: 4px;
+}
+
+.app-sidebar::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.app-sidebar::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 10px;
+}
+
+/* ==========================================
+   RESPONSIVE DESIGN
+========================================== */
+
+@media (max-width: 768px) {
+    .app-sidebar {
+        width: 210px;
+        padding: 20px 12px 15px;
+    }
+
+    .sidebar-brand {
+        gap: 9px;
+        padding-bottom: 25px;
+    }
+
+    .sidebar-brand-icon {
+        width: 42px;
+        height: 42px;
+        min-width: 42px;
+        font-size: 23px;
+    }
+
+    .sidebar-brand-text h2 {
+        font-size: 18px;
+    }
+
+    .sidebar-link {
+        min-height: 44px;
+        font-size: 13px;
+    }
+
+    .sidebar-promo {
+        padding: 15px 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .app-sidebar {
+        width: 180px;
+        padding: 18px 9px 12px;
+    }
+
+    .sidebar-brand {
+        gap: 7px;
+        padding-left: 3px;
+    }
+
+    .sidebar-brand-icon {
+        width: 36px;
+        height: 36px;
+        min-width: 36px;
+        font-size: 20px;
+    }
+
+    .sidebar-brand-text h2 {
+        font-size: 15px;
+    }
+
+    .sidebar-brand-text p {
+        font-size: 9px;
+    }
+
+    .sidebar-link {
+        gap: 9px;
+        padding: 0 9px;
+        font-size: 12px;
+    }
+
+    .sidebar-link-icon {
+        width: 21px;
+        min-width: 21px;
+        font-size: 19px;
+    }
+
+    .sidebar-promo h3 {
+        font-size: 12px;
+    }
+
+    .sidebar-promo p {
+        font-size: 10px;
+    }
+}

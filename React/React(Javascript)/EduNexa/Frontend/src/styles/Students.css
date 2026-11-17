@@ -1,0 +1,688 @@
+/* ==========================================
+   STUDENTS PAGE
+========================================== */
+
+.students-page {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    width: 100%;
+    min-width: 0;
+    color: var(--text-color, #344760);
+}
+
+/* ==========================================
+   PAGE HEADER
+========================================== */
+
+.studentsPageHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.studentsPageHeader .leftSide h1 {
+    margin: 0 0 7px;
+    color: var(--heading-color, #172b4d);
+    font-size: 23px;
+    font-weight: 750;
+    letter-spacing: -0.5px;
+}
+
+.studentsPageHeader .leftSide p {
+    margin: 0;
+    color: var(--muted-color, #718096);
+    font-size: 12px;
+}
+
+.studentsPageHeader .rightSide button {
+    padding: 12px 19px;
+    border: none;
+    border-radius: var(--radius-md, 8px);
+    background: var(--primary-color, #1769f5);
+    color: white;
+    font-size: 12px;
+    font-weight: 650;
+    box-shadow: 0 4px 10px rgba(23, 105, 245, 0.17);
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.studentsPageHeader .rightSide button:hover {
+    background: var(--primary-dark, #0d55d9);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(23, 105, 245, 0.22);
+}
+
+/* ==========================================
+   SUMMARY CARDS
+========================================== */
+
+.studentsSummaryCards {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.studentsSummaryCards>div {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 15px;
+    min-height: 125px;
+    padding: 23px;
+    overflow: hidden;
+    background: var(--white-color, #fff);
+    border: 1px solid var(--border-color, #e3eaf5);
+    border-radius: var(--radius-lg, 12px);
+    box-shadow: var(--shadow-sm, 0 3px 12px rgba(20, 45, 85, 0.04));
+    transition: 0.2s ease;
+}
+
+.studentsSummaryCards>div:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-md, 0 8px 22px rgba(20, 45, 85, 0.07));
+}
+
+.studentsSummaryCards h2 {
+    margin: 0;
+    color: var(--muted-color, #718096);
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.studentsSummaryCards p {
+    margin: 0;
+    color: var(--heading-color, #172b4d);
+    font-size: 29px;
+    font-weight: 750;
+    letter-spacing: -1px;
+}
+
+/* ==========================================
+   STUDENT LIST CONTAINER
+========================================== */
+
+.studentPageContent {
+    min-width: 0;
+    padding: 24px;
+    background: var(--white-color, #fff);
+    border: 1px solid var(--border-color, #e3eaf5);
+    border-radius: var(--radius-lg, 12px);
+    box-shadow: var(--shadow-sm, 0 3px 12px rgba(20, 45, 85, 0.04));
+}
+
+.studentPageContent>h2 {
+    margin: 0 0 22px;
+    color: var(--heading-color, #172b4d);
+    font-size: 16px;
+    font-weight: 700;
+}
+
+/* ==========================================
+   SEARCH AND FILTER TOOLBAR
+========================================== */
+
+.studentPageContentHeader {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    width: 100%;
+    margin-bottom: 22px;
+    padding: 18px;
+    background: #f8faff;
+    border: 1px solid var(--border-color, #e3eaf5);
+    border-radius: 10px;
+}
+
+/* Search input */
+
+.studentPageContentHeader>input {
+    display: block;
+    width: 100%;
+    height: 46px;
+    min-width: 0;
+    padding: 0 15px 0 44px;
+    border: 1px solid #dce5f1;
+    border-radius: 8px;
+    outline: none;
+    background-color: #fff;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' fill='none' stroke='%238997aa' stroke-width='1.8' viewBox='0 0 24 24'%3E%3Ccircle cx='11' cy='11' r='7'/%3E%3Cpath d='m16 16 4 4'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: 15px center;
+    background-size: 18px;
+    color: var(--text-color, #344760);
+    font-family: inherit;
+    font-size: 13px;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.studentPageContentHeader>input::placeholder {
+    color: #9aa6b5;
+    font-size: 12px;
+}
+
+.studentPageContentHeader>input:hover {
+    border-color: #b9cce8;
+}
+
+.studentPageContentHeader>input:focus {
+    border-color: var(--primary-color, #1769f5);
+    box-shadow: 0 0 0 3px rgba(23, 105, 245, 0.1);
+}
+
+/* Filters grid */
+
+.allFilterTypes {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 14px;
+    width: 100%;
+}
+
+.allFilterTypes>div {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    min-width: 0;
+}
+
+.allFilterTypes label {
+    color: var(--muted-color, #718096);
+    font-size: 11px;
+    font-weight: 650;
+}
+
+.allFilterTypes select {
+    width: 100%;
+    min-width: 0;
+    height: 42px;
+    padding: 0 10px;
+    border: 1px solid var(--border-color, #e3eaf5);
+    border-radius: 8px;
+    outline: none;
+    background: #fff;
+    color: var(--text-color, #344760);
+    font-family: inherit;
+    font-size: 12px;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.allFilterTypes select:hover {
+    border-color: #b9cce8;
+}
+
+.allFilterTypes select:focus {
+    border-color: var(--primary-color, #1769f5);
+    box-shadow: 0 0 0 3px rgba(23, 105, 245, 0.08);
+}
+
+/* ==========================================
+   STUDENT TABLE
+========================================== */
+
+.studentContentMainPart {
+    width: 100%;
+    min-width: 0;
+    overflow-x: auto;
+    border: 1px solid var(--border-color, #e3eaf5);
+    border-radius: 9px;
+}
+
+.studentContentMainPart table {
+    width: 100%;
+    min-width: 850px;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.studentContentMainPart thead {
+    background: var(--surface-secondary, #f5f8fd);
+}
+
+.studentContentMainPart th {
+    padding: 15px 13px;
+    color: var(--muted-color, #718096);
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+    white-space: nowrap;
+}
+
+.studentContentMainPart td {
+    padding: 15px 13px;
+    color: var(--text-color, #344760);
+    font-size: 12px;
+    border-top: 1px solid var(--border-color, #e3eaf5);
+    white-space: nowrap;
+}
+
+.studentContentMainPart tbody tr {
+    transition: background 0.2s ease;
+}
+
+.studentContentMainPart tbody tr:hover {
+    background: #f8faff;
+}
+
+.studentContentMainPart tbody tr td[colspan="7"] {
+    padding: 35px 15px;
+    color: var(--muted-color, #718096);
+    text-align: center;
+}
+
+/* ==========================================
+   TABLE ACTION BUTTONS
+========================================== */
+
+/* Keep the table cell as a table cell */
+.studentContentMainPart td:last-child {
+    white-space: nowrap;
+}
+
+.studentContentMainPart td button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 5px;
+    padding: 7px 10px;
+    border: 1px solid var(--border-color, #e3eaf5);
+    border-radius: 6px;
+    background: var(--white-color, #fff);
+    color: var(--text-color, #344760);
+    font-size: 10px;
+    font-weight: 650;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.studentContentMainPart td button:hover {
+    border-color: var(--primary-color, #1769f5);
+    background: var(--primary-light, #eaf2ff);
+    color: var(--primary-color, #1769f5);
+}
+
+/* Delete button: third button for Admin, first button for Teacher is View */
+.studentContentMainPart td button:last-child:not(:first-child) {
+    color: var(--danger-color, #dc3545);
+}
+
+.studentContentMainPart td button:last-child:not(:first-child):hover {
+    border-color: var(--danger-color, #dc3545);
+    background: var(--danger-light, #fff0f0);
+}
+
+/* ==========================================
+   PAGINATION
+========================================== */
+
+.studentsPagination {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    margin-top: 22px;
+}
+
+.studentsPagination p {
+    margin: 0;
+    color: var(--muted-color, #718096);
+    font-size: 11px;
+}
+
+.studentsPagination>div {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.studentsPagination button {
+    min-width: 82px;
+    padding: 9px 13px;
+    border: 1px solid var(--border-color, #e3eaf5);
+    border-radius: var(--radius-md, 8px);
+    background: var(--white-color, #fff);
+    color: var(--text-color, #344760);
+    font-size: 11px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.studentsPagination button:not(:disabled):hover {
+    background: var(--primary-light, #eaf2ff);
+    border-color: var(--primary-color, #1769f5);
+    color: var(--primary-color, #1769f5);
+}
+
+.studentsPagination button:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+/* ==========================================
+   MODAL OVERLAY
+========================================== */
+
+.modalOverlay {
+    position: fixed;
+    inset: 0;
+    z-index: 2000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background: rgba(13, 29, 53, 0.58);
+    backdrop-filter: blur(4px);
+}
+
+/* ==========================================
+   MODAL BOX
+========================================== */
+
+.modalBox {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 760px;
+    max-height: 90vh;
+    overflow: hidden;
+    background: var(--white-color, #fff);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 14px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+    animation: modalAppear 0.2s ease;
+}
+
+@keyframes modalAppear {
+    from {
+        opacity: 0;
+        transform: translateY(12px) scale(0.98);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* ==========================================
+   MODAL HEADER
+========================================== */
+
+.modalHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 15px;
+    padding: 23px 26px;
+    border-bottom: 1px solid var(--border-color, #e3eaf5);
+}
+
+.modalHeader h2 {
+    margin: 0 0 6px;
+    color: var(--heading-color, #172b4d);
+    font-size: 18px;
+    font-weight: 750;
+}
+
+.modalHeader p {
+    margin: 0;
+    color: var(--muted-color, #718096);
+    font-size: 11px;
+}
+
+.modalCloseBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    width: 32px;
+    height: 32px;
+    border: none;
+    border-radius: 7px;
+    background: var(--surface-secondary, #f5f8fd);
+    color: var(--muted-color, #718096);
+    font-size: 22px;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.modalCloseBtn:hover {
+    background: var(--danger-light, #fff0f0);
+    color: var(--danger-color, #dc3545);
+}
+
+/* ==========================================
+   MODAL BODY
+========================================== */
+
+.modalBody {
+    padding: 24px 26px;
+    overflow-y: auto;
+}
+
+.modalSection {
+    margin-bottom: 26px;
+}
+
+.modalSection:last-child {
+    margin-bottom: 0;
+}
+
+.modalSection>h3 {
+    margin: 0 0 17px;
+    padding-bottom: 11px;
+    color: var(--primary-color, #1769f5);
+    font-size: 12px;
+    font-weight: 750;
+    border-bottom: 1px solid var(--border-color, #e3eaf5);
+}
+
+.modalFormGrid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 17px;
+}
+
+.modalFormGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    min-width: 0;
+}
+
+.modalFormGroup.fullWidth {
+    grid-column: 1 / -1;
+}
+
+.modalFormGroup label {
+    color: var(--text-color, #344760);
+    font-size: 11px;
+    font-weight: 650;
+}
+
+.modalFormGroup input,
+.modalFormGroup select {
+    width: 100%;
+    height: 41px;
+    padding: 0 12px;
+    border: 1px solid var(--border-color, #e3eaf5);
+    border-radius: var(--radius-md, 8px);
+    outline: none;
+    background: var(--white-color, #fff);
+    color: var(--text-color, #344760);
+    font-family: inherit;
+    font-size: 12px;
+}
+
+.modalFormGroup input:focus,
+.modalFormGroup select:focus {
+    border-color: var(--primary-color, #1769f5);
+    box-shadow: 0 0 0 3px rgba(23, 105, 245, 0.08);
+}
+
+.errorMessage {
+    margin: 0;
+    color: var(--danger-color, #dc3545);
+    font-size: 10px;
+}
+
+/* ==========================================
+   MODAL FOOTER
+========================================== */
+
+.modalFooter {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+    padding: 17px 26px;
+    border-top: 1px solid var(--border-color, #e3eaf5);
+    background: #fafbfd;
+}
+
+.modalFooter button {
+    padding: 10px 17px;
+    border-radius: var(--radius-md, 8px);
+    font-size: 11px;
+    font-weight: 650;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.modalCancelBtn {
+    border: 1px solid var(--border-color, #e3eaf5);
+    background: var(--white-color, #fff);
+    color: var(--text-color, #344760);
+}
+
+.modalCancelBtn:hover {
+    background: var(--surface-secondary, #f5f8fd);
+}
+
+.modalSaveBtn {
+    border: 1px solid var(--primary-color, #1769f5);
+    background: var(--primary-color, #1769f5);
+    color: white;
+}
+
+.modalSaveBtn:hover {
+    background: var(--primary-dark, #0d55d9);
+}
+
+/* ==========================================
+   DELETE CONFIRMATION MODAL
+========================================== */
+
+.deleteConfirmationBox {
+    max-width: 440px;
+}
+
+.deleteConfirmationBox .modalBody {
+    padding: 25px 26px;
+}
+
+.deleteConfirmationBox .modalBody p {
+    margin: 0 0 12px;
+    color: var(--text-color, #344760);
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+.deleteConfirmationBox .modalBody p:last-child {
+    margin-bottom: 0;
+    color: var(--muted-color, #718096);
+    font-size: 11px;
+}
+
+.deleteConfirmationBox .modalBody strong {
+    color: var(--heading-color, #172b4d);
+    font-weight: 750;
+}
+
+.modalDeleteBtn {
+    border: 1px solid var(--danger-color, #dc3545);
+    background: var(--danger-color, #dc3545);
+    color: white;
+}
+
+.modalDeleteBtn:hover {
+    filter: brightness(0.9);
+}
+
+/* ==========================================
+   RESPONSIVE DESIGN
+========================================== */
+
+@media (max-width: 1050px) {
+    .allFilterTypes {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 700px) {
+    .studentsSummaryCards {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .studentsSummaryCards>div {
+        min-height: 100px;
+        padding: 18px;
+    }
+
+    .studentsPageHeader {
+        align-items: flex-start;
+    }
+
+    .studentPageContent {
+        padding: 16px;
+    }
+
+    .studentsPagination {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .modalBox {
+        max-height: 95vh;
+    }
+
+    .modalHeader,
+    .modalBody {
+        padding: 18px;
+    }
+
+    .modalFooter {
+        padding: 15px 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .studentsPageHeader {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .studentsPageHeader .rightSide,
+    .studentsPageHeader .rightSide button {
+        width: 100%;
+    }
+
+    .allFilterTypes {
+        grid-template-columns: 1fr;
+    }
+
+    .modalFormGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .modalFormGroup.fullWidth {
+        grid-column: auto;
+    }
+}

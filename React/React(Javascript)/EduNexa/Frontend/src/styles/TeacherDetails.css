@@ -1,0 +1,391 @@
+/* =========================================
+   TEACHER DETAILS PAGE
+========================================= */
+
+.teacherDetailsPage {
+    width: 100%;
+    min-width: 0;
+}
+
+.teacherDetailsContent {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+/* =========================================
+   PAGE HEADER
+========================================= */
+
+.teacherDetailsPageHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.teacherDetailsPageHeader h1 {
+    margin: 0 0 7px;
+    color: var(--text-primary, #172b4d);
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: -0.6px;
+}
+
+.teacherDetailsPageHeader p {
+    margin: 0;
+    color: var(--text-muted, #718096);
+    font-size: 13px;
+}
+
+.teacherDetailsPageHeader button {
+    padding: 10px 17px;
+    border: 1px solid #d8e5f8;
+    border-radius: 8px;
+    background: #edf4ff;
+    color: var(--primary-color, #1769f5);
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.teacherDetailsPageHeader button:hover {
+    border-color: var(--primary-color, #1769f5);
+    background: var(--primary-color, #1769f5);
+    color: #fff;
+    transform: translateY(-1px);
+}
+
+/* =========================================
+   TEACHER PROFILE HEADER
+========================================= */
+
+.teacherProfileHeader {
+    display: flex;
+    align-items: center;
+    gap: 23px;
+    padding: 27px;
+    border: 1px solid var(--border-color, #e3eaf5);
+    border-radius: 14px;
+    background: linear-gradient(115deg, #ffffff 60%, #f1f6ff 100%);
+    box-shadow: var(--shadow-sm, 0 3px 12px rgba(20, 40, 80, 0.04));
+}
+
+.teacherProfileAvatar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 88px;
+    height: 88px;
+    flex-shrink: 0;
+    border: 5px solid #e5efff;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #1769f5, #5796ff);
+    color: #fff;
+    font-size: 27px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    box-shadow: 0 5px 15px rgba(23, 105, 245, 0.2);
+}
+
+.teacherProfileInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 7px;
+    min-width: 0;
+}
+
+.teacherProfileInfo h2 {
+    margin: 0;
+    color: var(--text-primary, #172b4d);
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: -0.4px;
+}
+
+.teacherProfileInfo p {
+    margin: 0;
+    color: var(--text-muted, #718096);
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.teacherProfileInfo .teacherStatus {
+    display: inline-flex;
+    align-items: center;
+    margin-top: 3px;
+    padding: 5px 12px;
+    border-radius: 20px;
+    background: #e8f8ef;
+    color: #16834f;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+/* =========================================
+   TEACHER INFORMATION CARDS
+========================================= */
+
+.teacherInformationCards {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.teacherInformationCard {
+    min-width: 0;
+    padding: 23px;
+    border: 1px solid var(--border-color, #e3eaf5);
+    border-radius: 13px;
+    background: var(--surface-color, #fff);
+    box-shadow: var(--shadow-sm, 0 3px 12px rgba(20, 40, 80, 0.04));
+    transition: 0.2s ease;
+}
+
+.teacherInformationCard:hover {
+    box-shadow: var(--shadow-md, 0 8px 22px rgba(20, 40, 80, 0.08));
+}
+
+.teacherInformationCard h2 {
+    margin: 0 0 19px;
+    padding-bottom: 13px;
+    border-bottom: 1px solid #edf1f7;
+    color: var(--text-primary, #172b4d);
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.teacherInformationCard>div {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 15px;
+    padding: 11px 0;
+    border-bottom: 1px solid #f0f3f8;
+}
+
+.teacherInformationCard>div:last-child {
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.teacherInformationCard>div>span {
+    flex: 0 0 42%;
+    color: var(--text-muted, #718096);
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+.teacherInformationCard>div>p {
+    flex: 1;
+    min-width: 0;
+    margin: 0;
+    color: var(--text-primary, #172b4d);
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1.6;
+    text-align: right;
+    overflow-wrap: anywhere;
+}
+
+/* =========================================
+   ASSIGNED COURSES SECTION
+========================================= */
+
+.teacherCoursesOverview {
+    min-width: 0;
+    overflow: hidden;
+    border: 1px solid var(--border-color, #e3eaf5);
+    border-radius: 13px;
+    background: var(--surface-color, #fff);
+    box-shadow: var(--shadow-sm, 0 3px 12px rgba(20, 40, 80, 0.04));
+}
+
+.teacherCoursesOverview>h2 {
+    margin: 0;
+    padding: 21px 23px;
+    border-bottom: 1px solid var(--border-color, #e3eaf5);
+    color: var(--text-primary, #172b4d);
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.teacherCoursesTable {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.teacherCoursesTable table {
+    width: 100%;
+    min-width: 700px;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.teacherCoursesTable thead {
+    background: #f7f9fd;
+}
+
+.teacherCoursesTable th {
+    padding: 15px 17px;
+    color: #687993;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.35px;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+.teacherCoursesTable td {
+    padding: 16px 17px;
+    border-top: 1px solid #edf1f7;
+    color: #52627b;
+    font-size: 12px;
+    white-space: nowrap;
+}
+
+.teacherCoursesTable tbody tr {
+    transition: background 0.2s ease;
+}
+
+.teacherCoursesTable tbody tr:hover {
+    background: #f8faff;
+}
+
+.teacherCoursesTable tbody tr td:first-child {
+    color: var(--primary-color, #1769f5);
+    font-weight: 600;
+}
+
+.teacherCoursesTable tbody tr td:nth-child(2) {
+    color: var(--text-primary, #172b4d);
+    font-weight: 600;
+}
+
+.teacherCoursesTable tbody tr td[colspan="6"] {
+    padding: 40px 15px;
+    color: var(--text-muted, #718096);
+    text-align: center;
+    font-size: 13px;
+}
+
+/* =========================================
+   TEACHER NOT FOUND
+========================================= */
+
+.teacher-not-found {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 55vh;
+    padding: 35px 20px;
+    text-align: center;
+}
+
+.teacher-not-found h1 {
+    margin: 0 0 12px;
+    color: var(--text-primary, #172b4d);
+    font-size: 26px;
+    font-weight: 700;
+}
+
+.teacher-not-found p {
+    margin: 0 0 22px;
+    color: var(--text-muted, #718096);
+    font-size: 14px;
+}
+
+.teacher-not-found button {
+    padding: 11px 20px;
+    border: none;
+    border-radius: 8px;
+    background: var(--primary-color, #1769f5);
+    color: #fff;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.teacher-not-found button:hover {
+    background: var(--primary-dark, #0d55d9);
+    transform: translateY(-1px);
+}
+
+/* =========================================
+   RESPONSIVE DESIGN
+========================================= */
+
+@media (max-width: 850px) {
+    .teacherInformationCards {
+        gap: 15px;
+    }
+
+    .teacherInformationCard {
+        padding: 19px;
+    }
+}
+
+@media (max-width: 650px) {
+    .teacherDetailsContent {
+        gap: 19px;
+    }
+
+    .teacherDetailsPageHeader {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .teacherDetailsPageHeader h1 {
+        font-size: 22px;
+    }
+
+    .teacherProfileHeader {
+        align-items: flex-start;
+        padding: 20px;
+        gap: 16px;
+    }
+
+    .teacherProfileAvatar {
+        width: 68px;
+        height: 68px;
+        font-size: 22px;
+    }
+
+    .teacherProfileInfo h2 {
+        font-size: 18px;
+    }
+
+    .teacherInformationCards {
+        grid-template-columns: 1fr;
+    }
+
+    .teacherInformationCard {
+        padding: 20px;
+    }
+
+    .teacherCoursesOverview>h2 {
+        padding: 18px;
+    }
+}
+
+@media (max-width: 380px) {
+    .teacherProfileHeader {
+        flex-direction: column;
+    }
+
+    .teacherInformationCard>div {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .teacherInformationCard>div>span,
+    .teacherInformationCard>div>p {
+        flex: auto;
+        width: 100%;
+        text-align: left;
+    }
+}

@@ -1,0 +1,632 @@
+/* =========================================
+   COURSE DETAILS PAGE
+========================================= */
+
+.courseDetailsPage {
+    width: 100%;
+    min-width: 0;
+    color: var(--text-color, #172b4d);
+}
+
+/* =========================================
+   PAGE HEADER
+========================================= */
+
+.courseDetailsPageHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 26px;
+}
+
+.courseDetailsEyebrow {
+    display: inline-block;
+    margin-bottom: 8px;
+    color: var(--primary-color, #1769f5);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.1px;
+}
+
+.courseDetailsPageHeader h1 {
+    margin: 0 0 8px;
+    color: var(--text-color, #172b4d);
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.courseDetailsPageHeader p {
+    margin: 0;
+    color: var(--text-muted, #718096);
+    font-size: 13px;
+}
+
+.courseBackButton {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 10px 16px;
+    border: 1px solid var(--border-color, #e3eaf5);
+    border-radius: 8px;
+    background: #fff;
+    color: var(--primary-color, #1769f5);
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.courseBackButton:hover {
+    border-color: var(--primary-color, #1769f5);
+    background: #edf4ff;
+}
+
+.courseBackButton span {
+    font-size: 17px;
+}
+
+/* =========================================
+   COURSE OVERVIEW
+========================================= */
+
+.courseDetailsOverview {
+    display: grid;
+    grid-template-columns: minmax(250px, 2fr) repeat(3, minmax(130px, 1fr));
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.courseDetailsOverview>div {
+    min-width: 0;
+    padding: 21px;
+    border: 1px solid var(--border-color, #e3eaf5);
+    border-radius: 12px;
+    background: #fff;
+    box-shadow: var(--shadow-sm, 0 3px 12px rgba(20, 45, 85, 0.04));
+}
+
+/* Main course card */
+
+.courseOverviewMain {
+    border-left: 4px solid var(--primary-color, #1769f5) !important;
+}
+
+.courseOverviewTop {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 17px;
+}
+
+.courseOverviewIcon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 43px;
+    height: 43px;
+    border-radius: 10px;
+    background: #edf4ff;
+    font-size: 21px;
+}
+
+.courseOverviewMain h2 {
+    margin: 0 0 10px;
+    color: #172b4d;
+    font-size: 19px;
+    font-weight: 700;
+    overflow-wrap: anywhere;
+}
+
+.courseOverviewCode,
+.courseOverviewId {
+    margin: 7px 0 0;
+    color: #718096;
+    font-size: 12px;
+}
+
+/* Status badges */
+
+.courseStatus,
+.enrollmentStatus {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.courseStatus.active,
+.enrollmentStatus.active {
+    background: #e7f8ef;
+    color: #16834d;
+}
+
+.courseStatus.inactive,
+.enrollmentStatus.inactive {
+    background: #fff0f0;
+    color: #d64545;
+}
+
+.courseStatus.completed,
+.enrollmentStatus.completed {
+    background: #eaf2ff;
+    color: #1769f5;
+}
+
+.courseStatus.unknown,
+.enrollmentStatus.unknown {
+    background: #f0f2f5;
+    color: #64748b;
+}
+
+/* Statistics cards */
+
+.courseOverviewStat {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.courseStatIcon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 37px;
+    height: 37px;
+    margin-bottom: 13px;
+    border-radius: 9px;
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.courseStatIcon.blue {
+    background: #edf4ff;
+    color: #1769f5;
+}
+
+.courseStatIcon.green {
+    background: #e7f8ef;
+    color: #16834d;
+}
+
+.courseStatIcon.orange {
+    background: #fff5e6;
+    color: #d58b1c;
+}
+
+.courseOverviewStat h3 {
+    margin: 0 0 7px;
+    color: #172b4d;
+    font-size: 27px;
+    font-weight: 700;
+}
+
+.courseOverviewStat p {
+    margin: 0;
+    color: #718096;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+/* =========================================
+   SHARED SECTION HEADER
+========================================= */
+
+.courseSectionHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #edf1f7;
+}
+
+.courseSectionHeader h2 {
+    margin: 0 0 6px;
+    color: #172b4d;
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.courseSectionHeader p {
+    margin: 0;
+    color: #8996a8;
+    font-size: 12px;
+}
+
+/* =========================================
+   COURSE INFORMATION
+========================================= */
+
+.courseDetailsInformation,
+.courseAssignedTeacher,
+.courseEnrolledStudents {
+    padding: 24px;
+    margin-bottom: 24px;
+    border: 1px solid var(--border-color, #e3eaf5);
+    border-radius: 12px;
+    background: #fff;
+    box-shadow: var(--shadow-sm, 0 3px 12px rgba(20, 45, 85, 0.04));
+}
+
+.courseInformationGrid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 30px;
+}
+
+.courseInformationItem {
+    min-width: 0;
+    padding: 14px 0;
+    border-bottom: 1px solid #edf1f7;
+}
+
+.courseInformationItem span:not(.courseStatus) {
+    display: block;
+    margin-bottom: 8px;
+    color: #8996a8;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+.courseInformationItem p {
+    margin: 0;
+    color: #344760;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 1.6;
+    overflow-wrap: anywhere;
+}
+
+.courseInformationItem.fullWidth {
+    grid-column: 1 / -1;
+}
+
+/* =========================================
+   ASSIGNED TEACHER
+========================================= */
+
+.assignedTeacherCard {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    padding: 20px;
+    border: 1px solid #e5edf8;
+    border-radius: 10px;
+    background: #f8faff;
+}
+
+.assignedTeacherAvatar {
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+    background: #dceaff;
+    color: #1769f5;
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.assignedTeacherInfo {
+    flex: 1;
+    min-width: 0;
+}
+
+.assignedTeacherInfo h3 {
+    margin: 0 0 5px;
+    color: #263b56;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.assignedTeacherInfo>p {
+    margin: 0 0 14px;
+    color: #718096;
+    font-size: 12px;
+}
+
+.assignedTeacherDetails {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 9px 22px;
+}
+
+.assignedTeacherDetails span {
+    color: #64748b;
+    font-size: 11px;
+    overflow-wrap: anywhere;
+}
+
+.assignedTeacherDetails strong {
+    color: #344760;
+    font-weight: 600;
+}
+
+.viewTeacherButton,
+.viewStudentButton {
+    flex-shrink: 0;
+    padding: 9px 13px;
+    border: 1px solid #d9e8ff;
+    border-radius: 7px;
+    background: #edf5ff;
+    color: #1769f5;
+    font-size: 11px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.viewTeacherButton:hover,
+.viewStudentButton:hover {
+    border-color: #1769f5;
+    background: #1769f5;
+    color: #fff;
+}
+
+/* =========================================
+   ENROLLED STUDENTS
+========================================= */
+
+.courseStudentCount {
+    padding: 7px 11px;
+    border-radius: 20px;
+    background: #edf4ff;
+    color: #1769f5;
+    font-size: 11px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.courseStudentsTable {
+    width: 100%;
+    overflow-x: auto;
+    border: 1px solid #e6edf6;
+    border-radius: 9px;
+}
+
+.courseStudentsTable table {
+    width: 100%;
+    min-width: 850px;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.courseStudentsTable thead {
+    background: #f5f8fd;
+}
+
+.courseStudentsTable th {
+    padding: 14px 15px;
+    border-bottom: 1px solid #e3eaf5;
+    color: #65758b;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.4px;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+.courseStudentsTable td {
+    padding: 14px 15px;
+    border-bottom: 1px solid #edf1f7;
+    color: #53647c;
+    font-size: 12px;
+    white-space: nowrap;
+}
+
+.courseStudentsTable tbody tr {
+    transition: background 0.2s ease;
+}
+
+.courseStudentsTable tbody tr:hover {
+    background: #f8faff;
+}
+
+.courseStudentsTable tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.courseStudentId {
+    color: #1769f5 !important;
+    font-weight: 600;
+}
+
+.courseStudentName {
+    color: #263b56 !important;
+    font-weight: 600;
+}
+
+/* =========================================
+   EMPTY STATES
+========================================= */
+
+.courseEmptyState {
+    padding: 28px 18px;
+    border: 1px dashed #dce5f1;
+    border-radius: 9px;
+    background: #f8faff;
+    text-align: center;
+}
+
+.courseEmptyState p {
+    margin: 0;
+    color: #718096;
+    font-size: 13px;
+}
+
+/* =========================================
+   NOT FOUND / ACCESS DENIED
+========================================= */
+
+.courseDetailsMessage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 520px;
+    min-height: 350px;
+    padding: 40px;
+    margin: 40px auto;
+    border: 1px solid var(--border-color, #e3eaf5);
+    border-radius: 14px;
+    background: #fff;
+    box-shadow: var(--shadow-sm, 0 3px 12px rgba(20, 45, 85, 0.04));
+    text-align: center;
+}
+
+.courseMessageIcon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 55px;
+    height: 55px;
+    margin-bottom: 18px;
+    border-radius: 50%;
+    background: #fff5e6;
+    color: #d58b1c;
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.courseMessageIcon.denied {
+    background: #fff0f0;
+    color: #d64545;
+}
+
+.courseDetailsMessage h1 {
+    margin: 0 0 10px;
+    color: #172b4d;
+    font-size: 22px;
+}
+
+.courseDetailsMessage p {
+    margin: 0 0 22px;
+    color: #718096;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.courseDetailsMessage button {
+    padding: 11px 18px;
+    border: none;
+    border-radius: 7px;
+    background: var(--primary-color, #1769f5);
+    color: #fff;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.courseDetailsMessage button:hover {
+    background: var(--primary-dark, #0d55d9);
+}
+
+/* =========================================
+   RESPONSIVE DESIGN
+========================================= */
+
+@media (max-width: 1100px) {
+    .courseDetailsOverview {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .courseOverviewMain {
+        grid-column: 1 / -1;
+    }
+}
+
+@media (max-width: 768px) {
+    .courseDetailsPageHeader {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .courseBackButton {
+        width: 100%;
+    }
+
+    .courseDetailsOverview {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .courseOverviewMain {
+        grid-column: 1 / -1;
+    }
+
+    .courseDetailsInformation,
+    .courseAssignedTeacher,
+    .courseEnrolledStudents {
+        padding: 19px;
+    }
+
+    .assignedTeacherCard {
+        align-items: flex-start;
+        flex-wrap: wrap;
+    }
+
+    .assignedTeacherInfo {
+        flex-basis: calc(100% - 80px);
+    }
+
+    .viewTeacherButton {
+        width: 100%;
+    }
+}
+
+@media (max-width: 520px) {
+    .courseDetailsPageHeader h1 {
+        font-size: 21px;
+    }
+
+    .courseDetailsOverview {
+        grid-template-columns: 1fr;
+    }
+
+    .courseOverviewMain {
+        grid-column: auto;
+    }
+
+    .courseInformationGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .courseInformationItem.fullWidth {
+        grid-column: auto;
+    }
+
+    .courseSectionHeader {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .assignedTeacherCard {
+        flex-direction: column;
+    }
+
+    .assignedTeacherInfo {
+        width: 100%;
+    }
+
+    .viewTeacherButton {
+        width: 100%;
+    }
+
+    .courseDetailsMessage {
+        min-height: 300px;
+        padding: 25px 18px;
+        margin: 20px auto;
+    }
+}

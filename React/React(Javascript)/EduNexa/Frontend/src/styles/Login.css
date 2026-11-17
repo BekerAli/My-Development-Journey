@@ -1,0 +1,352 @@
+/* ========================================
+   LOGIN PAGE
+======================================== */
+
+.loginPage {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background: var(--background-color, #f3f6fc);
+}
+
+/* ========================================
+   LEFT BRAND SECTION
+======================================== */
+
+.leftSideOfLoginPage {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    text-align: center;
+    color: #ffffff;
+    background: linear-gradient(145deg, #102344, #1769f5);
+    position: relative;
+    overflow: hidden;
+}
+
+.leftSideOfLoginPage::before,
+.leftSideOfLoginPage::after {
+    content: "";
+    position: absolute;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.leftSideOfLoginPage::before {
+    width: 450px;
+    height: 450px;
+    top: -150px;
+    left: -150px;
+}
+
+.leftSideOfLoginPage::after {
+    width: 350px;
+    height: 350px;
+    bottom: -120px;
+    right: -100px;
+}
+
+.leftSideOfLoginPage h1 {
+    position: relative;
+    z-index: 1;
+    margin: 0 0 12px;
+    color: #ffffff;
+    font-size: clamp(38px, 5vw, 58px);
+    font-weight: 800;
+    letter-spacing: -2px;
+}
+
+.leftSideOfLoginPage p {
+    position: relative;
+    z-index: 1;
+    margin: 0;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 16px;
+    letter-spacing: 0.5px;
+}
+
+/* ========================================
+   RIGHT LOGIN SECTION
+======================================== */
+
+.rightSideLoginPage {
+    width: 100%;
+    max-width: 560px;
+    margin: auto;
+    padding: 55px 50px;
+}
+
+.rightSideLoginPage h2 {
+    margin: 0 0 10px;
+    color: var(--text-color, #172b4d);
+    font-size: 32px;
+    font-weight: 750;
+    letter-spacing: -0.8px;
+}
+
+.rightSideLoginPage>p {
+    margin: 0 0 32px;
+    color: var(--text-muted, #718096);
+    font-size: 14px;
+}
+
+/* ========================================
+   FORM
+======================================== */
+
+.rightSideLoginPage form {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+}
+
+.inputType {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+    margin-bottom: 10px;
+}
+
+.inputType label {
+    color: var(--text-color, #172b4d);
+    font-size: 13px;
+    font-weight: 650;
+}
+
+.inputType input {
+    width: 100%;
+    height: 48px;
+    padding: 0 15px;
+    border: 1px solid var(--border-color, #e3eaf5);
+    border-radius: 9px;
+    outline: none;
+    background: #ffffff;
+    color: var(--text-color, #172b4d);
+    font-size: 13px;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.inputType input::placeholder {
+    color: #a0aec0;
+}
+
+.inputType input:focus {
+    border-color: var(--primary-color, #1769f5);
+    box-shadow: 0 0 0 3px rgba(23, 105, 245, 0.1);
+}
+
+/* ========================================
+   PASSWORD INPUT
+======================================== */
+
+.passwordWrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.passwordWrapper input {
+    padding-right: 75px;
+}
+
+.passwordWrapper button {
+    position: absolute;
+    right: 13px;
+    border: none;
+    background: transparent;
+    color: var(--primary-color, #1769f5);
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.passwordWrapper button:hover {
+    color: var(--primary-dark, #0d55d9);
+}
+
+/* ========================================
+   VALIDATION AND AUTH ERRORS
+======================================== */
+
+.rightSideLoginPage form>p {
+    margin: -5px 0 8px;
+    color: #dc3545;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.rightSideLoginPage form>p:empty {
+    display: none;
+}
+
+/* ========================================
+   REMEMBER ME AND FORGOT PASSWORD
+======================================== */
+
+.rememberMeandForgetPasword {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin: 5px 0 12px;
+}
+
+.rememberMeandForgetPasword label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--text-muted, #718096);
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.rememberMeandForgetPasword input {
+    width: 15px;
+    height: 15px;
+    accent-color: var(--primary-color, #1769f5);
+    cursor: pointer;
+}
+
+.rememberMeandForgetPasword p {
+    margin: 0;
+    color: var(--primary-color, #1769f5);
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/* ========================================
+   LOGIN BUTTON
+======================================== */
+
+.rightSideLoginPage form>button[type="submit"] {
+    width: 100%;
+    height: 49px;
+    margin-top: 5px;
+    border: none;
+    border-radius: 9px;
+    background: var(--primary-color, #1769f5);
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.rightSideLoginPage form>button[type="submit"]:hover:not(:disabled) {
+    background: var(--primary-dark, #0d55d9);
+    transform: translateY(-1px);
+}
+
+.rightSideLoginPage form>button[type="submit"]:disabled {
+    opacity: 0.65;
+    cursor: not-allowed;
+}
+
+/* ========================================
+   DEMO ACCOUNTS
+======================================== */
+
+.demoAccounts {
+    margin-top: 32px;
+    padding-top: 24px;
+    border-top: 1px solid var(--border-color, #e3eaf5);
+}
+
+.demoAccounts h3 {
+    margin: 0 0 7px;
+    color: var(--text-color, #172b4d);
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.demoAccounts>p {
+    margin: 0 0 17px;
+    color: var(--text-muted, #718096);
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.demoAccounts>div {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.demoAccounts button {
+    min-height: 43px;
+    padding: 10px;
+    border: 1px solid var(--border-color, #e3eaf5);
+    border-radius: 8px;
+    background: #ffffff;
+    color: var(--primary-color, #1769f5);
+    font-size: 12px;
+    font-weight: 650;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.demoAccounts button:hover {
+    border-color: var(--primary-color, #1769f5);
+    background: var(--primary-light, #eaf2ff);
+}
+
+/* ========================================
+   RESPONSIVE DESIGN
+======================================== */
+
+@media (max-width: 900px) {
+    .loginPage {
+        grid-template-columns: 0.8fr 1.2fr;
+    }
+
+    .rightSideLoginPage {
+        padding: 40px 30px;
+    }
+}
+
+@media (max-width: 650px) {
+    .loginPage {
+        grid-template-columns: 1fr;
+    }
+
+    .leftSideOfLoginPage {
+        min-height: 190px;
+        padding: 35px 20px;
+    }
+
+    .leftSideOfLoginPage h1 {
+        font-size: 36px;
+    }
+
+    .leftSideOfLoginPage p {
+        font-size: 13px;
+    }
+
+    .rightSideLoginPage {
+        max-width: 500px;
+        padding: 40px 25px;
+    }
+
+    .rightSideLoginPage h2 {
+        font-size: 27px;
+    }
+}
+
+@media (max-width: 380px) {
+    .rightSideLoginPage {
+        padding: 32px 18px;
+    }
+
+    .demoAccounts>div {
+        grid-template-columns: 1fr;
+    }
+
+    .rememberMeandForgetPasword {
+        align-items: flex-start;
+    }
+}

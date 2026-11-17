@@ -1,0 +1,54 @@
+/* ==========================================
+   MAIN APPLICATION LAYOUT
+========================================== */
+
+.main-layout {
+    width: 100%;
+    min-height: 100vh;
+}
+
+/* ==========================================
+   MAIN CONTENT
+========================================== */
+
+.main-content {
+    min-height: 100vh;
+    margin-left: var(--sidebar-width);
+    width: calc(100% - var(--sidebar-width));
+
+    background-color: var(--background-color);
+}
+
+/* ==========================================
+   PAGE CONTENT
+========================================== */
+
+.page-content {
+    width: 100%;
+    min-height: calc(100vh - var(--navbar-height));
+    padding: 30px 32px;
+}
+
+/* ==========================================
+   RESPONSIVE LAYOUT
+========================================== */
+
+@media (max-width: 768px) {
+    :root {
+        --sidebar-width: 210px;
+    }
+
+    .page-content {
+        padding: 22px 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    :root {
+        --sidebar-width: 180px;
+    }
+
+    .page-content {
+        padding: 16px 12px;
+    }
+}

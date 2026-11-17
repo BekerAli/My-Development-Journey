@@ -1,0 +1,164 @@
+EduTrack/
+│
+├── frontend/                       # React application
+│   │
+│   ├── public/                     # Static public files
+│   │
+│   ├── src/
+│   │   │
+│   │   ├── assets/                 # Images, icons, logos
+│   │   │
+│   │   ├── components/             # Reusable UI components
+│   │   │   ├── common/
+│   │   │   │   ├── Button.jsx
+│   │   │   │   ├── Input.jsx
+│   │   │   │   ├── Modal.jsx
+│   │   │   │   ├── Card.jsx
+│   │   │   │   ├── Loader.jsx
+│   │   │   │   └── ErrorMessage.jsx
+│   │   │   │
+│   │   │   ├── layout/
+│   │   │   │   ├── Navbar.jsx
+│   │   │   │   ├── Sidebar.jsx
+│   │   │   │   ├── Footer.jsx
+│   │   │   │   └── ProtectedRoute.jsx
+│   │   │   │
+│   │   │   ├── students/
+│   │   │   │   ├── StudentTable.jsx
+│   │   │   │   ├── StudentForm.jsx
+│   │   │   │   └── StudentCard.jsx
+│   │   │   │
+│   │   │   ├── teachers/
+│   │   │   │   ├── TeacherList.jsx
+│   │   │   │   └── TeacherForm.jsx
+│   │   │   │
+│   │   │   ├── courses/
+│   │   │   │   ├── CourseList.jsx
+│   │   │   │   ├── CourseForm.jsx
+│   │   │   │   └── EnrollPanel.jsx
+│   │   │   │
+│   │   │   ├── attendance/
+│   │   │   │   └── AttendanceSheet.jsx
+│   │   │   │
+│   │   │   └── grades/
+│   │   │       ├── GradeTable.jsx
+│   │   │       └── GradeForm.jsx
+│   │   │
+│   │   ├── pages/                  # Complete application screens
+│   │   │   ├── Dashboard.jsx
+│   │   │   ├── Students.jsx
+│   │   │   ├── StudentDetails.jsx
+│   │   │   ├── Teachers.jsx
+│   │   │   ├── Courses.jsx
+│   │   │   ├── CourseDetails.jsx
+│   │   │   ├── Attendance.jsx
+│   │   │   ├── Grades.jsx
+│   │   │   ├── Reports.jsx
+│   │   │   ├── Login.jsx
+│   │   │   └── NotFound.jsx
+│   │   │
+│   │   ├── context/                # Shared application state
+│   │   │   ├── AuthContext.jsx
+│   │   │   └── SchoolContext.jsx
+│   │   │
+│   │   ├── hooks/                  # Reusable React hooks
+│   │   │   ├── useForm.js
+│   │   │   ├── useDebounce.js
+│   │   │   ├── useLocalStorage.js
+│   │   │   └── useFetch.js
+│   │   │
+│   │   ├── services/               # All frontend data operations
+│   │   │   ├── studentService.js
+│   │   │   ├── teacherService.js
+│   │   │   ├── courseService.js
+│   │   │   ├── attendanceService.js
+│   │   │   ├── gradeService.js
+│   │   │   └── apiClient.js
+│   │   │
+│   │   ├── data/                   # Frontend mock data
+│   │   │   └── mockData.js
+│   │   │
+│   │   ├── utils/                  # Helper functions
+│   │   │   ├── validators.js
+│   │   │   ├── formatters.js
+│   │   │   └── constants.js
+│   │   │
+│   │   ├── styles/                 # Global styling
+│   │   │   ├── global.css
+│   │   │   └── variables.css
+│   │   │
+│   │   ├── App.jsx                 # Main routing
+│   │   └── main.jsx                # React entry point
+│   │
+│   ├── .env.example                # Frontend environment template
+│   ├── index.html
+│   ├── package.json
+│   └── vite.config.js
+│
+├── backend/                        # Node.js application
+│   │
+│   ├── src/
+│   │   │
+│   │   ├── config/                 # Database and app configuration
+│   │   │   └── database.js
+│   │   │
+│   │   ├── models/                 # MongoDB/Mongoose models
+│   │   │   ├── User.js
+│   │   │   ├── Student.js
+│   │   │   ├── Teacher.js
+│   │   │   ├── Course.js
+│   │   │   ├── Enrollment.js
+│   │   │   ├── Attendance.js
+│   │   │   └── Grade.js
+│   │   │
+│   │   ├── controllers/            # Request handling logic
+│   │   │   ├── authController.js
+│   │   │   ├── studentController.js
+│   │   │   ├── teacherController.js
+│   │   │   ├── courseController.js
+│   │   │   ├── attendanceController.js
+│   │   │   ├── gradeController.js
+│   │   │   └── statsController.js
+│   │   │
+│   │   ├── routes/                 # API endpoints
+│   │   │   ├── authRoutes.js
+│   │   │   ├── studentRoutes.js
+│   │   │   ├── teacherRoutes.js
+│   │   │   ├── courseRoutes.js
+│   │   │   ├── attendanceRoutes.js
+│   │   │   ├── gradeRoutes.js
+│   │   │   └── statsRoutes.js
+│   │   │
+│   │   ├── middleware/             # Request protection and validation
+│   │   │   ├── authMiddleware.js
+│   │   │   ├── roleMiddleware.js
+│   │   │   ├── errorMiddleware.js
+│   │   │   └── validationMiddleware.js
+│   │   │
+│   │   ├── services/               # Backend business logic
+│   │   │   ├── authService.js
+│   │   │   ├── studentService.js
+│   │   │   ├── teacherService.js
+│   │   │   └── courseService.js
+│   │   │
+│   │   ├── validators/              # Backend input validation
+│   │   │   ├── studentValidator.js
+│   │   │   ├── teacherValidator.js
+│   │   │   └── courseValidator.js
+│   │   │
+│   │   ├── utils/                  # Backend helper functions
+│   │   │   ├── generateToken.js
+│   │   │   └── ApiError.js
+│   │   │
+│   │   ├── seed/                   # Initial database records
+│   │   │   └── seedData.js
+│   │   │
+│   │   └── app.js                  # Express application setup
+│   │
+│   ├── server.js                  # Start the backend server
+│   ├── .env.example
+│   └── package.json
+│
+├── .gitignore
+├── README.md
+└── package.json                   # Optional root-level scripts
